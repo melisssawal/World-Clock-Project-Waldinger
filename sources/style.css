@@ -4,21 +4,27 @@ body {
 }
 
 h1 {
-max-width: 40%; 
+font-family: "Fugaz One", sans-serif;
 text-align: center;
-font-size: 45px;
-padding: 10px;
-border-radius: 10px;
-background-color: rgb(240, 232, 165);
-
+font-size: 40px;
+padding: 5px;
+border-radius: 15px;
+background-color: rgb(255, 243, 138);
+position: absolute;
+top: 122px;
+left: 315px;
+right: 327px;
 }
 
 img {
     display: block;
     margin: 0 auto;
-    max-width: 20%;
+    max-width: 40%;
+    position: relative;
 }
 
 footer {
     text-align: center;
+    font-family: "DM Serif Text", serif;
+    font-size: 12px;
 }
