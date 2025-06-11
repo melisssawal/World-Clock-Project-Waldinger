@@ -17,5 +17,22 @@ londonDateSection.innerHTML = londonTime.format("MMMM Do, YYYY");
 londonTimeSection.innerHTML = londonTime.format("hh:mm:ss [<small>]A[</small>]");
 };
 
+function  updateCity (event) {
+let cityTimeZone = event.target.value;
+let cityTime = moment().tz(cityTimeZone);
+let citiesElement = document.querySelector(".city-display");
+citiesElement.innerHTML = `<div class="city">
+    <div>
+<h2>${cityTimeZone}</h2>
+<div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
+</div>
+<div class="time">${cityTime.format("hh:mm:ss")} <small>${cityTimeZone.format("A")}</small></div>
+</div>`;
+
+}
+
 updateTime ();
 setInterval (updateTime, 1000);
+
+let selectCities = document.querySelector("#cities");
+selectCities.addEventListener("change", updateCity);
